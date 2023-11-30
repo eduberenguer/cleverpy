@@ -1,0 +1,68 @@
+@use '../../styles/palette.scss' as *;
+
+footer {
+  width: 100%;
+
+  main {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $light;
+    height: 5em;
+    z-index: 2;
+    font-size: 0.8rem;
+    background-color: $dark;
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .admin {
+      display: flex;
+      gap: 1rem;
+      width: 8rem;
+      height: 2rem;
+      overflow: hidden;
+
+      address {
+        all: unset;
+        text-align: right;
+        display: flex;
+        align-items: center;
+      }
+
+      a,
+      i {
+        font-size: 2rem;
+        color: $primary;
+      }
+
+      a:visited {
+        color: $primary;
+      }
+    }
+
+    a {
+      display: flex;
+      text-decoration: none;
+      color: $primary;
+      font-size: 1.5rem;
+    }
+
+    a:visited {
+      color: $light;
+    }
+
+    a:hover {
+      transition: 0.2s ease-in-out;
+      transform: scale(1.1);
+      color: $light;
+    }
+  }
+}

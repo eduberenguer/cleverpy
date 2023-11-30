@@ -1,0 +1,143 @@
+@use '../../styles/palette.scss' as *;
+
+.details {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 100%;
+
+  .details-card {
+    text-transform: uppercase;
+    flex-direction: column;
+    height: 100%;
+    width: 60vw;
+    padding: 0 5rem 4rem 5rem;
+
+    h2 {
+      font-size: 2rem;
+      text-wrap: balance;
+      color: $secondary;
+    }
+    .hr {
+      width: 30%;
+      height: 1px;
+      background-color: $primary;
+      margin: 1rem 0;
+    }
+    p {
+      text-wrap: balance;
+    }
+
+    .user {
+      padding: 2rem 0;
+      span {
+        display: block;
+        font-size: 0.8rem;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .comments {
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    background-color: $primary;
+    height: 85vh;
+    width: 40vw;
+    overflow-y: scroll;
+
+    i {
+      opacity: 0.5;
+      color: $light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-size: 5rem;
+      text-transform: uppercase;
+      padding-bottom: 4.5rem;
+    }
+
+    .comments-list {
+      all: unset;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.9rem;
+      gap: 1rem;
+      margin: 1rem;
+      padding: 2rem 0;
+
+      li {
+        background-color: $light;
+        padding: 3rem;
+        width: 80%;
+      }
+
+      h3 {
+        font-weight: bold;
+        text-wrap: balance;
+        color: $secondary;
+      }
+
+      span {
+        display: block;
+        color: $primary;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 90%;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .comments::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  .comments::-webkit-scrollbar-track {
+    background: linear-gradient($dark, $dark-accent, $dark);
+  }
+
+  .comments::-webkit-scrollbar-thumb {
+    background-color: $light;
+  }
+}
+@media (width < 1200px) {
+  .details {
+    flex-direction: column;
+
+    .details-card {
+      padding: 5rem 1rem;
+    }
+
+    .comments {
+      position: relative;
+      width: 40vw;
+      overflow: initial;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 4rem;
+
+      i {
+        position: absolute;
+        color: $primary;
+        font-size: 5rem;
+        top: -9rem;
+        right: 50%;
+      }
+
+      .comments-list {
+        li {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

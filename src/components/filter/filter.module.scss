@@ -1,0 +1,42 @@
+@use '../../styles/palette.scss' as *;
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  input,
+  select {
+    all: unset;
+    background-color: $light;
+    color: $light;
+    padding: 0.5rem;
+    color: $dark-accent;
+    text-align: center;
+    width: 15rem;
+    border: 1px solid;
+  }
+
+  svg {
+    color: $primary;
+    font-size: 2.5rem;
+  }
+
+  select {
+    padding: 0.6rem 0.5rem;
+  }
+
+  option:disabled {
+    background-color: $light-accent;
+  }
+
+  @media (width < 700px) {
+    flex-direction: column;
+
+    svg {
+      display: none;
+    }
+  }
+}

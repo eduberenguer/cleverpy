@@ -1,0 +1,117 @@
+@use '../../styles/palette.scss' as *;
+
+.card {
+  position: relative;
+  text-transform: uppercase;
+  padding: 0 2rem 5rem 2rem;
+  min-height: 25rem;
+  background-color: $primary;
+  border: 2px solid;
+  color: $light;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(65, 11, 31, 0.3);
+
+  .user-info {
+    width: 100%;
+    border-bottom: 1px solid $light;
+    padding-bottom: 1rem;
+    img {
+      height: 2.5rem;
+      border-radius: 50%;
+      border: 2px solid $light;
+      background-color: $dark;
+    }
+    .user {
+      font-size: 0.8rem;
+      font-style: italic;
+      text-transform: none;
+    }
+    button {
+      all: unset;
+      position: absolute;
+      color: $light;
+      right: 2rem;
+      top: 1.2rem;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+
+    button:hover {
+      transition: all 0.2s;
+      transform: scale(1.1);
+    }
+  }
+
+  a {
+    all: unset;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: $dark;
+    color: $light;
+    padding: 1rem 0;
+    justify-content: center;
+    border-radius: 0 0 15px 15px;
+    cursor: pointer;
+  }
+
+  a:hover {
+    transition: all 0.2s;
+    box-shadow: 0 0 10px rgba(230, 43, 112, 0.1);
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+
+    span:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+
+  .title {
+    height: 5rem;
+    h2 {
+      all: unset;
+      text-align: center;
+      text-wrap: balance;
+      font-size: 1.3rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+  }
+
+  .hr {
+    width: 10%;
+    height: 1px;
+    background-color: $light;
+  }
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+}
+
+.body {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(65, 11, 31, 0.9);
+  transition: all 0.3s;
+}

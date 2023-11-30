@@ -1,0 +1,21 @@
+@use './palette.scss' as *;
+
+body,
+html {
+  height: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient($dark, $dark-accent, $dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 5rem;
+  background-color: $primary;
+}

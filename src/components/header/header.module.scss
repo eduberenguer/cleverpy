@@ -1,0 +1,120 @@
+@use '../../styles/palette.scss' as *;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $dark;
+  padding: 1em 0;
+  margin: 0;
+  z-index: 1;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 3rem;
+  }
+
+  h1 {
+    color: $light;
+    font-size: 1rem;
+    width: 8rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 2.5rem;
+  }
+
+  a:visited {
+    color: $light;
+  }
+
+  img {
+    height: 2.5rem;
+  }
+
+  .logo:hover {
+    filter: grayscale(0.3);
+    transition: all 0.5s;
+  }
+
+  .routes {
+    margin-right: 3rem;
+    height: 3rem;
+    .users,
+    .posts {
+      transform: translateY(0.5rem);
+    }
+
+    .posts {
+      transform: translateY(0.55rem) scale(1.2);
+    }
+    display: flex;
+    gap: 1rem;
+
+    a:hover {
+      transition: 0.2s ease-in-out;
+      color: $primary;
+    }
+
+    .logout {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border-left: 1px solid $light;
+      padding-left: 1.5rem;
+      margin-left: 1rem;
+      transform: translateY(0.1rem);
+
+      button {
+        all: unset;
+        font-size: 2.8rem;
+        color: $primary;
+        transform: translateY(0.2rem);
+      }
+
+      div:hover > button {
+        transform: scale(1.1) translateY(0.25rem);
+        transition: all 0.2s;
+      }
+    }
+  }
+
+  @media (width < 700px) {
+    transition: all 0.2s;
+    h1 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (width < 500px) {
+    transition: all 0.2s;
+    flex-direction: column;
+    .logo {
+      display: flex;
+      margin: 0;
+      padding: 1rem 0;
+      h1 {
+        width: fit-content;
+        text-align: center;
+      }
+    }
+
+    .routes {
+      margin: 0;
+      justify-content: center;
+      width: 100%;
+
+      a {
+        font-size: 2rem;
+      }
+      .logout {
+        transform: scale(0.7) translateY(-0.2rem);
+        padding-left: 3.5rem;
+      }
+    }
+  }
+}

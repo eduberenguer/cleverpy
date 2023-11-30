@@ -1,0 +1,62 @@
+@use '../../styles/palette.scss' as *;
+
+.card {
+  text-transform: uppercase;
+  border-top: 2px solid $light-accent;
+  padding: 2rem 1rem;
+  display: flex;
+
+  img {
+    width: 10rem;
+    margin-right: 3rem;
+  }
+
+  section {
+    width: 20rem;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .username {
+    font-size: 1.5rem;
+    width: 100%;
+    color: $primary;
+  }
+
+  li {
+    font-size: 0.7rem;
+    padding-top: 1rem;
+    display: flex;
+    width: 100%;
+    color: $dark;
+  }
+
+  @media (width < 700px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+
+    img {
+      width: 10rem;
+      margin-right: 0;
+    }
+
+    .username {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+    li {
+      justify-content: center;
+    }
+  }
+}
+
+.card:first-child {
+  border-top: none;
+}

@@ -1,0 +1,90 @@
+@use '../../styles/palette.scss' as *;
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.modal-button {
+  all: unset;
+  font-size: 3.5rem;
+  color: $light;
+  cursor: pointer;
+  transform: translateX(-0.2rem);
+  @media (width < 500px) {
+    transition: all 0.2s;
+    font-size: 3.1em;
+  }
+}
+
+.modal-button:hover {
+  transition: 0.2s ease-in-out;
+  color: $primary;
+}
+
+.modal {
+  transition: 0.2s ease-in-out;
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+  }
+
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    z-index: 3;
+    width: 20rem;
+    box-shadow: 0 0 10px $dark;
+
+    textarea {
+      all: unset;
+      background-color: $light;
+      padding: 1rem;
+      border: none;
+      width: 90%;
+    }
+
+    textarea::placeholder {
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin: auto 0;
+    }
+
+    input {
+      padding: 1rem;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+      border: none;
+      width: 100%;
+    }
+
+    .close-modal {
+      all: unset;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}
+
+.send {
+  display: flex;
+  justify-content: center;
+  background-color: $dark;
+  button {
+    all: unset;
+    background-color: $dark;
+    padding: 1rem;
+    color: $light;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
