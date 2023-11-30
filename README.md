@@ -8,7 +8,10 @@ You can view the user list, all their posts and the complete details of each pos
 
 **Deploy:**
 <br/>
+
 [https://cleverpy.vercel.app/](https://cleverpy.vercel.app/)
+
+<br/>
 
 **Web tour:**
 <br/>
