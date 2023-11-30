@@ -1,7 +1,5 @@
 # Cleverpy Technical Assesment
 
-**Sergio Mata Herrero (30/11/23).**
-
 Application for managing {JSON} Placeholder user posts.
 
 You can view the user list, all their posts and the complete details of each post with their respective comments. You can also log in to access options such as deleting and creating new posts.
