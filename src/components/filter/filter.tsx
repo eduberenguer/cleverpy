@@ -32,6 +32,7 @@ export function Filter({ value, onChange }: Props) {
         onChange={onChange}
       />
       <PiListMagnifyingGlass />
+      <label htmlFor="authorFilter">Filter by author:</label>
       <select defaultValue={''} onChange={handleFilter}>
         <option value="" disabled>
           Filter by author ▾

@@ -19,10 +19,14 @@ export function Header() {
         </Link>
 
         <div className={style.routes}>
-          <Link to="/" className={style.posts}>
+          <Link to="/" className={style.posts} aria-label="All posts lists">
             <MdOutlineArticle />
           </Link>{' '}
-          <Link to="/users" className={style.users}>
+          <Link
+            to="/users"
+            className={style.users}
+            aria-label="All users lists"
+          >
             <FaRegUserCircle />
           </Link>
           <CreateForm></CreateForm>
