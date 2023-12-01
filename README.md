@@ -16,7 +16,7 @@ You can view the user list, all their posts and the complete details of each pos
 **Web tour:**
 <br/>
 
-![tour](https://github.com/cleverpy-technical-test/frontend-sergio-mata/assets/104355739/1569e42c-9d20-467f-942f-f545debd35a8)
+![tour](./public/tour.gif)
 
 <br/>
 
@@ -81,7 +81,7 @@ npm run test
 
 <br/>
 
-![coverage](https://github.com/cleverpy-technical-test/frontend-sergio-mata/assets/104355739/6ad71c0d-7b4f-43b9-a88a-68fa2516e681)
+![coverage](./public/coverage.png)
 
 <br/>
 
