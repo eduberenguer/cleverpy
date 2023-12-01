@@ -16,7 +16,7 @@ You can view the user list, all their posts and the complete details of each pos
 **Web tour:**
 <br/>
 
-![tour](./public/tour.gif)
+![tour](./public/web-tour.gif)
 
 <br/>
 
